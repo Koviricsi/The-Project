@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background: var(--dark-blue);
+    color: var(--white);
+    font-family: "Goldman", sans-serif;
+    height: max(10dvh, 75px);
+    container-type: size;
+}
+
+#nav-links,
+#nav-btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-links > section,
+#nav-btns > section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 12cqmin;
+    cursor: pointer;
+    user-select: none;
+}
+
+#nav-links > section > span,
+#nav-btns > section > span{
+    order: -1;
+}
+
+
+#nav-links > section > span,
+#nav-btns > section > span{
+    font-variation-settings: 'FILL' 0;
+    transition: 0.2s all;
+}
+
+#nav-links > section:is(:hover, :active, :focus) > span,
+#nav-btns > section:is(:hover, :active, :focus) > span{
+    font-variation-settings: 'FILL' 1;
+}
+
+
+/*nav-links*/
+
+
+#nav-links{
+    align-items: stretch;
+}
+
+#nav-links > section{
+    background-image: linear-gradient(to top, transparent, transparent 20cqh);
+    border-bottom: 5cqh solid transparent;
+    position: relative;
+    gap: 5cqh;
+    transition: 0.2s all;
+}
+
+#nav-links > section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to top, 
+    hsl(from var(--white) h s l / 0.5), 
+    transparent 20cqh
+  );
+  opacity: 0;
+  transition: 0.2s all;
+  pointer-events: none;
+}
+
+#nav-links > section > h3{
+    text-shadow: 0cqw 0cqw var(--blue), 0cqw 0cqw var(--light-blue);
+    text-wrap: nowrap;
+    transition: 0.2s all;
+}
+
+#nav-links > section:is(:hover, :active, :focus) {
+  border-bottom: 5cqh solid var(--white);
+}
+
+#nav-links > section:is(:hover, :active, :focus)::before {
+  opacity: 1;
+}
+
+#nav-links > section:is(:hover, :active, :focus) > h3{
+    text-shadow: .1cqw .1cqw var(--blue), .2cqw .2cqw var(--light-blue);
+}
+
+
+/*nav-btns*/
+
+
+#nav-btns{
+    align-items: center;
+    padding-inline: 1cqw;
+    gap: 1cqw;
+}
+
+#nav-btns > section{
+    background: var(--blue);
+    border: 3cqmin dashed var(--white);
+    border-radius: 20cqmin;
+    transition: 0.2s all;
+}
+
+#nav-btns > section:is(:hover, :active, :focus){
+    border: 3cqmin solid var(--white);
+    background: var(--light-blue);
+}
