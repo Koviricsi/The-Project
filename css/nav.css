@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 
+
+/*nav START*/
+
+
 nav{
     width: 100%;
     display: flex;
@@ -9,7 +13,13 @@ nav{
     color: var(--white);
     font-family: "Goldman", sans-serif;
     height: max(10dvh, 75px);
+    overflow: hidden;
     container-type: size;
+    transition: 0.2s all;
+}
+
+#nav-hamburger{
+    display: none;
 }
 
 #nav-links,
@@ -23,7 +33,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 12cqmin;
     cursor: pointer;
     user-select: none;
@@ -47,7 +56,10 @@ nav{
 }
 
 
-/*nav-links*/
+/*nav END*/
+
+
+/*nav-links START*/
 
 
 #nav-links{
@@ -55,6 +67,7 @@ nav{
 }
 
 #nav-links > section{
+    flex-direction: column;
     background-image: linear-gradient(to top, transparent, transparent 20cqh);
     border-bottom: 5cqh solid transparent;
     position: relative;
@@ -95,7 +108,10 @@ nav{
 }
 
 
-/*nav-btns*/
+/*nav-links END*/
+
+
+/*nav-btns START*/
 
 
 #nav-btns{
@@ -105,6 +121,7 @@ nav{
 }
 
 #nav-btns > section{
+    gap: 0.5cqw;
     background: var(--blue);
     border: 3cqmin dashed var(--white);
     border-radius: 20cqmin;
@@ -113,5 +130,133 @@ nav{
 
 #nav-btns > section:is(:hover, :active, :focus){
     border: 3cqmin solid var(--white);
-    background: var(--light-blue);
+    background: var(--light-blue) !important;
 }
+
+
+/*nav-btns END*/
+
+
+/*other START*/
+
+
+#nav-links > section.nav-active{
+    background: hsl(from var(--accent) h s l / 0.2);
+}
+
+#nav-btns > section.nav-active{
+    background: hsl(from var(--light-blue) h s l / 0.5);
+    border-color: var(--accent);
+}
+
+
+/*other END*/
+
+
+/*Desktop minimized START*/
+
+
+@media screen and (width < 1075px) and (hover: hover) and (pointer: fine) {
+    body{
+        background-color: #aaa;
+    }
+
+    nav{
+        width: 8cqmin;
+        height: 8cqmin;
+        border: 0.5cqmin solid var(--white);
+        border-radius: 2cqmin;
+        margin: 1cqmin;
+        position: absolute;
+        right: 0;
+        z-index: 10;
+    }
+
+    nav > #nav-links,
+    nav > #nav-btns{
+        transform: scale(0%);
+        transition: 0.2s all;
+    }
+
+    #nav-hamburger{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 9;
+        font-size: 100cqmin;
+        cursor: pointer;
+        user-select: none;
+        font-variation-settings: 'FILL' 0, 'wght' 400;
+        transition: 0.2s all;
+        transition-delay: 0.05s;
+    }
+
+    #nav-hamburger:is(:hover, :active, :focus){
+        font-variation-settings: 'FILL' 1, 'wght' 600;
+    }
+
+
+    nav.open{
+        container-type: normal;
+        height: fit-content;
+        width: fit-content;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav.open > #nav-links,
+    nav.open > #nav-btns{
+        transform: scale(100%);
+        transition: 0.2s all;
+        padding: 2cqmin;
+    }
+
+    nav.open > #nav-links{
+        flex-direction: column;
+    }
+
+    nav.open > #nav-btns{
+        flex-wrap: wrap;
+        margin-inline: 2cqw;
+        gap: 5cqw;
+    }
+
+    nav.open > #nav-links > section{
+        padding: 0 4cqmin;
+        gap: 5cqmin;
+        border: none;
+        flex-direction: row;
+        font-size: 3dvw;
+        justify-content: start;
+    }
+
+    nav.open > #nav-btns > section{
+        padding: 1cqmin 2cqmin;
+        gap: .4cqmin;
+        border: .5cqmin dashed var(--white);
+        font-size: 2cqmin;
+        min-width: 150px;
+    }
+
+    nav.open > #nav-btns > section:is(:hover, :active, :focus){
+        border: .5cqmin solid var(--white);
+    }
+    
+    nav.open > #nav-links > section:is(:hover, :active, :focus) > h3{
+    text-shadow: .3cqw .3cqw var(--blue), .5cqw .5cqw var(--light-blue);
+    }
+
+    nav.open > #nav-hamburger{
+        position: relative;
+        align-self: flex-end;
+        font-size: 6cqmin;
+        margin: 0.5cqmin;
+        transform: rotateY(180deg);
+    }
+}
+
+
+/*Desktop minimized END*/
