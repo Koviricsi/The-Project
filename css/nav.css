@@ -232,6 +232,14 @@ nav{
         transform: scale(1);
         padding: 2cqmin;
     }
+
+    nav.open > #nav-links{
+        flex-grow: 1;
+    }
+
+    nav.open > #nav-btns{
+        margin-inline: auto;
+    }
     
     nav.open > #nav-links > section{
         padding: 1dvw;
