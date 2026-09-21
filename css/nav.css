@@ -158,103 +158,119 @@ nav{
 
 @media screen and (width < 1075px) and (hover: hover) and (pointer: fine) {
     body{
-        background-color: #aaa;
+        background: #ddd;
     }
 
     nav{
-        width: 8cqmin;
-        height: 8cqmin;
-        border: 0.5cqmin solid var(--white);
-        border-radius: 2cqmin;
-        margin: 1cqmin;
+        container-type: normal;
+        width: fit-content;
+        height: fit-content;
+        max-height: 12dvh;
         position: absolute;
         right: 0;
-        z-index: 10;
-    }
-
-    nav > #nav-links,
-    nav > #nav-btns{
-        transform: scale(0%);
-        transition: 0.2s all;
+        margin: 1cqmin;
+        border: 0.5dvw solid var(--white);
+        border-radius: 2dvw;
+        flex-direction: column;
     }
 
     #nav-hamburger{
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 9;
-        font-size: 100cqmin;
+        position: relative;
+        display: flex;
+        font-size: max(25px, 6dvw);
         cursor: pointer;
         user-select: none;
-        font-variation-settings: 'FILL' 0, 'wght' 400;
+        font-variation-settings: 'FILL' 0;
+        align-self: flex-end;
         transition: 0.2s all;
-        transition-delay: 0.05s;
     }
 
     #nav-hamburger:is(:hover, :active, :focus){
-        font-variation-settings: 'FILL' 1, 'wght' 600;
+        font-variation-settings: 'FILL' 1;
     }
 
+    #nav-links,
+    #nav-btns{
+        width: 0;
+        height: 0;
+        transition: 0.2s all;
+        transform: scale(0);
+    }
+
+    #nav-links{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav-btns{
+        justify-content: center;
+        gap: 4dvw;
+    }
+
+    #nav-links > section,
+    #nav-btns > section{
+        width: 0;
+        height: 0;
+        flex-direction: row;
+        filter: blur(10px);
+        border: none;
+        transition: 0.2s all;
+    }
 
     nav.open{
-        container-type: normal;
-        height: fit-content;
-        width: fit-content;
-        flex-direction: column;
-        justify-content: center;
+        max-height: fit-content;
+    }
+
+    nav.open > #nav-hamburger{
+        transform: rotateY(180deg);
     }
 
     nav.open > #nav-links,
     nav.open > #nav-btns{
-        transform: scale(100%);
-        transition: 0.2s all;
+        width: fit-content;
+        height: fit-content;
+        transform: scale(1);
         padding: 2cqmin;
     }
-
-    nav.open > #nav-links{
-        flex-direction: column;
-    }
-
-    nav.open > #nav-btns{
-        flex-wrap: wrap;
-        margin-inline: 2cqw;
-        gap: 5cqw;
-    }
-
+    
     nav.open > #nav-links > section{
-        padding: 0 4cqmin;
-        gap: 5cqmin;
+        padding: 1dvw;
+        gap: 1dvh;
+        width: 100%;
+        height: fit-content;
+        justify-content: flex-start;
         border: none;
-        flex-direction: row;
-        font-size: 3dvw;
-        justify-content: start;
+        filter: blur(0);
+    }
+
+    nav.open > #nav-links > section > span{
+        font-size: max(20px, 2.5dvw);
+    }
+
+    nav.open > #nav-links > section > h3{
+        font-size: max(10px, 2dvw);
     }
 
     nav.open > #nav-btns > section{
-        padding: 1cqmin 2cqmin;
-        gap: .4cqmin;
+        flex-direction: row;
+        padding: 0.5dvw 1.5dvw;
+        gap: 0;
+        width: 100%;
+        height: fit-content;
         border: .5cqmin dashed var(--white);
-        font-size: 2cqmin;
-        min-width: 150px;
+        filter: blur(0);
     }
 
     nav.open > #nav-btns > section:is(:hover, :active, :focus){
         border: .5cqmin solid var(--white);
     }
-    
-    nav.open > #nav-links > section:is(:hover, :active, :focus) > h3{
-    text-shadow: .3cqw .3cqw var(--blue), .5cqw .5cqw var(--light-blue);
+
+    nav.open > #nav-btns > section > span{
+        font-size: max(15px, 2dvw);
     }
 
-    nav.open > #nav-hamburger{
-        position: relative;
-        align-self: flex-end;
-        font-size: 6cqmin;
-        margin: 0.5cqmin;
-        transform: rotateY(180deg);
+    nav.open > #nav-btns > section > h3{
+        font-size: max(10px, 2dvw);
     }
 }
 
