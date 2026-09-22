@@ -157,10 +157,6 @@ nav{
 
 
 @media screen and (width < 1075px) and (hover: hover) and (pointer: fine) {
-    body{
-        background: #ddd;
-    }
-
     nav{
         container-type: normal;
         width: fit-content;
