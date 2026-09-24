@@ -164,6 +164,7 @@ nav{
         max-height: 12dvh;
         position: absolute;
         right: 0;
+        top: 0;
         margin: 1cqmin;
         border: 0.5dvw solid var(--white);
         border-radius: 2dvw;
