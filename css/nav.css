@@ -1,81 +1,87 @@
-@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
 
 /*nav START*/
 
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  background: var(--dark-blue);
-  color: var(--white);
-  font-family: "Goldman", sans-serif;
-  height: max(10dvh, 75px);
-  overflow: hidden;
-  container-type: size;
-  transition: 0.2s all;
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background: var(--dark-blue);
+    color: var(--white);
+    font-family: "Goldman", sans-serif;
+    height: max(10dvh, 75px);
+    overflow: hidden;
+    container-type: size;
+    transition: 0.2s all;
 }
 
-#nav-hamburger {
-  display: none;
+#nav-hamburger{
+    display: none;
 }
 
 #nav-links,
-#nav-btns {
-  display: flex;
-  justify-content: space-around;
+#nav-btns{
+    display: flex;
+    justify-content: space-around;
 }
 
 #nav-links > section,
-#nav-btns > section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12cqmin;
-  cursor: pointer;
-  user-select: none;
+#nav-btns > section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12cqmin;
+    cursor: pointer;
+    user-select: none;
 }
 
 #nav-links > section > span,
-#nav-btns > section > span {
-  order: -1;
+#nav-btns > section > span{
+    order: -1;
 }
 
+
 #nav-links > section > span,
-#nav-btns > section > span {
-  font-variation-settings: "FILL" 0;
-  transition: 0.2s all;
+#nav-btns > section > span{
+    font-variation-settings: 'FILL' 0;
+    transition: 0.2s all;
 }
 
 #nav-links > section:is(:hover, :active, :focus) > span,
-#nav-btns > section:is(:hover, :active, :focus) > span {
-  font-variation-settings: "FILL" 1;
+#nav-btns > section:is(:hover, :active, :focus) > span{
+    font-variation-settings: 'FILL' 1;
 }
+
 
 /*nav END*/
 
+
 /*nav-links START*/
 
-#nav-links {
-  align-items: stretch;
+
+#nav-links{
+    align-items: stretch;
 }
 
-#nav-links > section {
-  flex-direction: column;
-  background-image: linear-gradient(to top, transparent, transparent 20cqh);
-  border-bottom: 5cqh solid transparent;
-  position: relative;
-  gap: 5cqh;
-  transition: 0.2s all;
+#nav-links > section{
+    flex-direction: column;
+    background-image: linear-gradient(to top, transparent, transparent 20cqh);
+    border-bottom: 5cqh solid transparent;
+    position: relative;
+    gap: 5cqh;
+    transition: 0.2s all;
 }
 
 #nav-links > section::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-image: linear-gradient(
-    to top,
-    hsl(from var(--white) h s l / 0.5),
+    to top, 
+    hsl(from var(--white) h s l / 0.5), 
     transparent 20cqh
   );
   opacity: 0;
@@ -83,12 +89,10 @@ nav {
   pointer-events: none;
 }
 
-#nav-links > section > h3 {
-  text-shadow:
-    0cqw 0cqw var(--blue),
-    0cqw 0cqw var(--light-blue);
-  text-wrap: nowrap;
-  transition: 0.2s all;
+#nav-links > section > h3{
+    text-shadow: 0cqw 0cqw var(--blue), 0cqw 0cqw var(--light-blue);
+    text-wrap: nowrap;
+    transition: 0.2s all;
 }
 
 #nav-links > section:is(:hover, :active, :focus) {
@@ -99,172 +103,181 @@ nav {
   opacity: 1;
 }
 
-#nav-links > section:is(:hover, :active, :focus) > h3 {
-  text-shadow:
-    0.1cqw 0.1cqw var(--blue),
-    0.2cqw 0.2cqw var(--light-blue);
+#nav-links > section:is(:hover, :active, :focus) > h3{
+    text-shadow: .1cqw .1cqw var(--blue), .2cqw .2cqw var(--light-blue);
 }
+
 
 /*nav-links END*/
 
+
 /*nav-btns START*/
 
-#nav-btns {
-  align-items: center;
-  padding-inline: 1cqw;
-  gap: 1cqw;
+
+#nav-btns{
+    align-items: center;
+    padding-inline: 1cqw;
+    gap: 1cqw;
 }
 
-#nav-btns > section {
-  gap: 0.5cqw;
-  background: var(--blue);
-  border: 3cqmin dashed var(--white);
-  border-radius: 20cqmin;
-  transition: 0.2s all;
+#nav-btns > section{
+    gap: 0.5cqw;
+    background: var(--blue);
+    border: 3cqmin dashed var(--white);
+    border-radius: 20cqmin;
+    transition: 0.2s all;
 }
 
-#nav-btns > section:is(:hover, :active, :focus) {
-  border: 3cqmin solid var(--white);
-  background: var(--light-blue) !important;
+#nav-btns > section:is(:hover, :active, :focus){
+    border: 3cqmin solid var(--white);
+    background: var(--light-blue) !important;
 }
+
 
 /*nav-btns END*/
 
+
 /*other START*/
 
-#nav-links > section.nav-active {
-  background: hsl(from var(--accent) h s l / 0.2);
+
+#nav-links > section.nav-active{
+    background: hsl(from var(--accent) h s l / 0.2);
 }
 
-#nav-btns > section.nav-active {
-  background: hsl(from var(--light-blue) h s l / 0.5);
-  border-color: var(--accent);
+#nav-btns > section.nav-active{
+    background: hsl(from var(--light-blue) h s l / 0.5);
+    border-color: var(--accent);
 }
+
 
 /*other END*/
 
-/*Desktop minimized START*/
 
-@media screen and (width < 1075px) and (hover: hover) and (pointer: fine) {
-  nav {
-    container-type: normal;
-    width: fit-content;
-    height: fit-content;
-    max-height: 12dvh;
-    position: absolute;
-    right: 0;
-    margin: 1cqmin;
-    border: 0.5dvw solid var(--white);
-    border-radius: 2dvw;
-    flex-direction: column;
-  }
+/*Minimized START*/
 
-  #nav-hamburger {
-    position: relative;
-    display: flex;
-    font-size: max(25px, 6dvw);
-    cursor: pointer;
-    user-select: none;
-    font-variation-settings: "FILL" 0;
-    align-self: flex-end;
-    transition: 0.2s all;
-  }
 
-  #nav-hamburger:is(:hover, :active, :focus) {
-    font-variation-settings: "FILL" 1;
-  }
+@media screen and (width < 1075px) {
+    nav{
+        container-type: normal;
+        width: fit-content;
+        height: fit-content;
+        max-height: 12dvh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1cqmin;
+        border: 0.5dvw solid var(--white);
+        border-radius: 2dvw;
+        flex-direction: column;
+    }
 
-  #nav-links,
-  #nav-btns {
-    width: 0;
-    height: 0;
-    transition: 0.2s all;
-    transform: scale(0);
-  }
+    #nav-hamburger{
+        position: relative;
+        display: flex;
+        font-size: max(25px, 6dvw);
+        cursor: pointer;
+        user-select: none;
+        font-variation-settings: 'FILL' 0;
+        align-self: flex-end;
+        transition: 0.2s all;
+    }
 
-  #nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    #nav-hamburger:is(:hover, :active, :focus){
+        font-variation-settings: 'FILL' 1;
+    }
 
-  #nav-btns {
-    justify-content: center;
-    gap: 4dvw;
-  }
+    #nav-links,
+    #nav-btns{
+        width: 0;
+        height: 0;
+        transition: 0.2s all;
+        transform: scale(0);
+    }
 
-  #nav-links > section,
-  #nav-btns > section {
-    width: 0;
-    height: 0;
-    flex-direction: row;
-    filter: blur(10px);
-    border: none;
-    transition: 0.2s all;
-  }
+    #nav-links{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  nav.open {
-    max-height: fit-content;
-  }
+    #nav-btns{
+        justify-content: center;
+        gap: 4dvw;
+    }
 
-  nav.open > #nav-hamburger {
-    transform: rotateY(180deg);
-  }
+    #nav-links > section,
+    #nav-btns > section{
+        width: 0;
+        height: 0;
+        flex-direction: row;
+        filter: blur(10px);
+        border: none;
+        transition: 0.2s all;
+    }
 
-  nav.open > #nav-links,
-  nav.open > #nav-btns {
-    width: fit-content;
-    height: fit-content;
-    transform: scale(1);
-    padding: 2cqmin;
-  }
+    nav.open{
+        max-height: fit-content;
+    }
 
-  nav.open > #nav-links {
-    flex-grow: 1;
-  }
+    nav.open > #nav-hamburger{
+        transform: rotateY(180deg);
+    }
 
-  nav.open > #nav-btns {
-    margin-inline: auto;
-  }
+    nav.open > #nav-links,
+    nav.open > #nav-btns{
+        width: fit-content;
+        height: fit-content;
+        transform: scale(1);
+        padding: 2cqmin;
+    }
 
-  nav.open > #nav-links > section {
-    padding: 1dvw;
-    gap: 1dvh;
-    width: 100%;
-    height: fit-content;
-    justify-content: flex-start;
-    border: none;
-    filter: blur(0);
-  }
+    nav.open > #nav-links{
+        flex-grow: 1;
+    }
 
-  nav.open > #nav-links > section > span {
-    font-size: max(20px, 2.5dvw);
-  }
+    nav.open > #nav-btns{
+        margin-inline: auto;
+    }
+    
+    nav.open > #nav-links > section{
+        padding: 1dvw;
+        gap: 1dvh;
+        width: 100%;
+        height: fit-content;
+        justify-content: flex-start;
+        border: none;
+        filter: blur(0);
+    }
 
-  nav.open > #nav-links > section > h3 {
-    font-size: max(10px, 2dvw);
-  }
+    nav.open > #nav-links > section > span{
+        font-size: max(20px, 2.5dvw);
+    }
 
-  nav.open > #nav-btns > section {
-    flex-direction: row;
-    padding: 0.5dvw 1.5dvw;
-    gap: 0;
-    width: 100%;
-    height: fit-content;
-    border: 0.5cqmin dashed var(--white);
-    filter: blur(0);
-  }
+    nav.open > #nav-links > section > h3{
+        font-size: max(10px, 2dvw);
+    }
 
-  nav.open > #nav-btns > section:is(:hover, :active, :focus) {
-    border: 0.5cqmin solid var(--white);
-  }
+    nav.open > #nav-btns > section{
+        flex-direction: row;
+        padding: 0.5dvw 1.5dvw;
+        gap: 0;
+        width: 100%;
+        height: fit-content;
+        border: .5cqmin dashed var(--white);
+        filter: blur(0);
+    }
 
-  nav.open > #nav-btns > section > span {
-    font-size: max(15px, 2dvw);
-  }
+    nav.open > #nav-btns > section:is(:hover, :active, :focus){
+        border: .5cqmin solid var(--white);
+    }
 
-  nav.open > #nav-btns > section > h3 {
-    font-size: max(10px, 2dvw);
-  }
+    nav.open > #nav-btns > section > span{
+        font-size: max(15px, 2dvw);
+    }
+
+    nav.open > #nav-btns > section > h3{
+        font-size: max(10px, 2dvw);
+    }
 }
 
-/*Desktop minimized END*/
+
+/*Minimized END*/

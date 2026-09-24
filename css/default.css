@@ -6,14 +6,13 @@
 
 /*https://colorhunt.co/palette/02152603346e6eacdae2e2b6*/
 
-:root {
-  interpolate-size: allow-keywords;
-  --white: #fff;
-  --black: #000;
-  --dark-blue: #021526;
-  --blue: #03346e;
-  --light-blue: #6eacda;
-  --accent: #e2e2b6;
+:root{
+    --white: #fff;
+    --black: #000;
+    --dark-blue: #021526;
+    --blue: #03346E;
+    --light-blue: #6EACDA;
+    --accent: #E2E2B6;
 }
 
 html {
@@ -21,10 +20,12 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  min-height: 100dvh;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    min-height: 100dvh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--dark-blue);
+    color: var(--accent);
 }
 
 img,
