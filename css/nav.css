@@ -153,10 +153,10 @@ nav{
 /*other END*/
 
 
-/*Desktop minimized START*/
+/*Minimized START*/
 
 
-@media screen and (width < 1075px) and (hover: hover) and (pointer: fine) {
+@media screen and (width < 1075px) {
     nav{
         container-type: normal;
         width: fit-content;
@@ -279,4 +279,4 @@ nav{
 }
 
 
-/*Desktop minimized END*/
+/*Minimized END*/
