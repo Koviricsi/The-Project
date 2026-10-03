@@ -14,6 +14,13 @@
     --blue: #03346E;
     --light-blue: #6EACDA;
     --accent: #E2E2B6;
+    --fs-sm: clamp(0.833rem, 0.067vi + 0.82rem, 0.9rem);
+    --fs-base: clamp(1rem, 0.125vi + 0.975rem, 1.125rem);
+    --fs-md: clamp(1.2rem, 0.206vi + 1.159rem, 1.406rem);
+    --fs-lg: clamp(1.44rem, 0.318vi + 1.376rem, 1.758rem);
+    --fs-xl: clamp(1.728rem, 0.469vi + 1.634rem, 2.197rem);
+    --fs-xxl: clamp(2.074rem, 0.673vi + 1.939rem, 2.747rem);
+    --fs-xxxl: clamp(2.488rem, 0.945vi + 2.299rem, 3.433rem);
 }
 
 html {
@@ -35,4 +42,22 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+#main-overlay{
+  position: absolute;
+  inset: 0;
+  background: var(--blue);
+  z-index: 1000;
+  animation-name: mainOverlayFade;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+@keyframes mainOverlayFade {
+  0%{opacity: 1;}
+  100%{opacity: 0; display: none;}
 }

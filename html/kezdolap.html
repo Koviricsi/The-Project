@@ -9,13 +9,33 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,menu,dashboard_2_gear,wand_stars,dataset,hard_drive_2,person,trolley,right_panel_open"
     />
+    <link rel="stylesheet" href="../css/kezdolap.css" />
+
     <script src="../js/nav.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="../src/img/bitkovacs_logo_cut.png">
+    <script src="../js/header.js" defer></script>
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../src/img/bitkovacs_logo_cut.png"
+    />
     <title>BitKovács - Kezdőlap</title>
   </head>
   <body>
+    <div id="main-overlay"></div>
     <header>
-        test
+      <section>
+        <h2>Kezdőlap</h2>
+        <h1 data-text="Üdvözöljük műhelyünkben!">Üdvözöljük műhelyünkben!</h1>
+      </section>
+      <div id="header-decoration">
+        <img src="../src/img/billentyuzet.png" class="hdec" />
+        <img src="../src/img/cd.png" class="hdec" />
+        <img src="../src/img/eger.png" class="hdec" />
+        <img src="../src/img/fejhallgato.png" class="hdec" />
+        <img src="../src/img/monitor.png" class="hdec" />
+        <img src="../src/img/szamitogephaz.png" class="hdec" />
+      </div>
     </header>
     <nav>
       <span id="nav-hamburger" class="material-symbols-outlined"
@@ -54,7 +74,5 @@
         </section>
       </div>
     </nav>
-
-
   </body>
 </html>
