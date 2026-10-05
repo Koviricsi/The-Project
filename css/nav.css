@@ -87,8 +87,8 @@ nav{
     gap: 0.3dvw;
     padding: 1cqh 1.5cqw;
     margin-right: 1dvw;
-    border: 0.5cqmin solid var(--white);
-    border-radius: var(--fs-lg);
+    border: 0.4cqmin solid var(--white);
+    border-radius: var(--fs-md);
 }
 
 #nav-btns > section:is(:hover,:active,:focus) {
@@ -176,10 +176,14 @@ nav{
         padding-bottom: 1cqh;
     }
 
-    #nav-links{
-        display: grid;
+    #nav-links {
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    #nav-links > section {
+        flex: 1 1 250px;
     }
 
     #nav-links > section > :is(h3,span){
@@ -200,7 +204,7 @@ nav{
     }
 
     #nav-responsive.open > #nav-btns > section{
-        padding: 1cqh 1.5cqw;
+        padding: 0.8cqh 1.2cqw;
         border: max(0.5cqmin, 3px) solid var(--white);
     }
 
