@@ -1,4 +1,4 @@
-let nav = document.getElementsByTagName("nav")[0];
+let nav = document.getElementById("nav-responsive");
 let navBtn = document.getElementById("nav-hamburger");
 
 navBtn.addEventListener("click", () => {
