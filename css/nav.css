@@ -168,6 +168,7 @@ nav {
     height: fit-content;
     height: 0;
     border-top: 0cqh solid transparent;
+    overflow: hidden;
   }
 
   #nav-responsive.open {
@@ -181,10 +182,25 @@ nav {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    gap: 1px;
+    background: var(--white);
+    padding-bottom: 1px;
   }
 
   #nav-links > section {
     flex: 1 1 250px;
+    background: var(--dark-blue);
+    padding: 0;
+    border: 0;
+  }
+
+  #nav-responsive.open > #nav-links > section{
+    padding: 1.5dvh 1.5dvw;
+    border-bottom: 0.5dvh solid transparent;
+  }
+
+  #nav-responsive.open > #nav-links > section:is(:hover, :active, :focus){
+    border-bottom: 0.5dvh solid var(--white);
   }
 
   #nav-links > section > :is(h3, span) {
@@ -197,6 +213,12 @@ nav {
 
   #nav-responsive.open > #nav-links > section > h3 {
     font-size: var(--fs-md);
+  }
+
+  #nav-btns{
+    width: 100%;
+    padding-top: 1dvh;
+    background: var(--dark-blue);
   }
 
   #nav-btns > section {
