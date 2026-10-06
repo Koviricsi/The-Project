@@ -43,19 +43,26 @@ footer > div:first-child > section > h4{
 
 footer > div:last-child {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
     row-gap: 1dvh;
     flex: 1 1 350px;
+    text-align: justify;
 }
 
-footer > div:last-child > section:last-child{
+footer > div:last-child > section:last-of-type{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    column-gap: 2dvw;
+    column-gap: max(2cqw, 20px);
+    font-size: var(--fs-md);
 }
 
-footer > div:last-child > section:last-child > span{
+footer > div:last-child > section:last-of-type > span{
     cursor: pointer;
+}
+
+footer > div:last-child > small{
+    color: hsl(from var(--white) h s l / 0.7);
+    font-size: var(--fs-sm);
 }

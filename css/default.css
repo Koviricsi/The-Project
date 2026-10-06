@@ -14,13 +14,13 @@
   --blue: #03346e;
   --light-blue: #6eacda;
   --accent: #e2e2b6;
-  --fs-sm: clamp(0.833rem, 0.067vi + 0.82rem, 0.9rem);
-  --fs-base: clamp(1rem, 0.125vi + 0.975rem, 1.125rem);
-  --fs-md: clamp(1.2rem, 0.206vi + 1.159rem, 1.406rem);
-  --fs-lg: clamp(1.44rem, 0.318vi + 1.376rem, 1.758rem);
-  --fs-xl: clamp(1.728rem, 0.469vi + 1.634rem, 2.197rem);
-  --fs-xxl: clamp(2.074rem, 0.673vi + 1.939rem, 2.747rem);
-  --fs-xxxl: clamp(2.488rem, 0.945vi + 2.299rem, 3.433rem);
+  --fs-sm: calc(0.6rem + 0.5vi);
+  --fs-base: calc(0.8rem + 0.6vi);
+  --fs-md: calc(1rem + 0.7vi);
+  --fs-lg: calc(1.2rem + 0.8vi);
+  --fs-xl: calc(1.4rem + 0.9vi);
+  --fs-xxl: calc(1.6rem + 1vi);
+  --fs-xxxl: calc(1.8rem + 1.1vi);
 }
 
 html {
@@ -43,6 +43,7 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+  -webkit-user-drag: none;
 }
 
 #main-overlay {

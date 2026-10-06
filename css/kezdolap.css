@@ -1,79 +1,212 @@
-main{
-    width: 100%;
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
-main *{
-    outline: solid red 1px;
+#introduction {
+  background: linear-gradient(-30deg, var(--light-blue), var(--white));
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5cqmin;
+  width: 100dvw;
+  row-gap: 5dvh;
+  height: fit-content;
 }
 
-#introduction{
-    background-color: var(--white);
-    color: var(--blue);
-    font-size: var(--fs-md);
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5cqmin;
+#introduction > div {
+  flex: 1 1 350px;
 }
 
-#introduction > div{
-    flex: 1 1 300px;
+#introduction > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 5dvh;
 }
 
-#introduction > div{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-direction: column;
+#introduction > div:first-child > h1 {
+  font-size: var(--fs-xxxl);
+  font-family: "Bungee", sans-serif;
+  color: var(--blue);
+  max-width: 85dvw;
+}
+
+#introduction > div:first-child > h1 > span {
+  color: var(--light-blue);
+  text-shadow: 0.2cqmin 0.2cqmin var(--dark-blue);
+}
+
+#introduction > div:first-child > p {
+  font-size: var(--fs-base);
+  font-weight: bold;
+  width: 45ch;
+  max-width: 80dvw;
+  line-height: 1.6;
+  font-family: "Chakra Petch", sans-serif;
+  color: hsl(from var(--blue) h s l / 0.8);
+}
+
+#introduction > div:first-child > button {
+  font-size: var(--fs-base);
+  background: var(--blue);
+  color: var(--accent);
+  font-family: "Bungee", sans-serif;
+  padding: max(2cqmin, 10px);
+  border-radius: var(--fs-md);
+  border: max(0.6cqmin, 5px) solid var(--accent);
+  box-shadow: max(0.5cqmin, 5px) max(0.5cqmin, 5px) var(--black);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#introduction > div:first-child > button:hover {
+  background: var(--accent);
+  color: var(--blue);
+  box-shadow: none;
+}
+
+#introduction > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#introduction > div:last-child > img {
+  width: max(35cqw, 160px);
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: var(--white);
+  place-items: center;
+  z-index: -1;
+}
+
+.showcase > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: var(--fs-sm);
+  position: relative;
+  border-radius: var(--fs-sm);
+  background: var(--blue);
+  margin: 2dvh 4dvw;
+  max-width: 50dvw;
+}
+
+.conf_badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--dark-blue);
+  border-bottom-left-radius: var(--fs-sm);
+  padding: max(0.8cqmin, 5px);
+  font-family: "Bungee", sans-serif;
+  font-size: var(--fs-sm);
+  text-shadow: 0 0 var(--fs-sm) var(--white);
+}
+
+.showcase > div > h2 {
+  width: 100%;
+  text-align: center;
+  font-size: var(--fs-base);
+  font-family: "Chakra Petch", sans-serif;
+  padding-inline: max(0.5cqmin, 4px);
+  background: hsl(from var(--blue) h s 15%);
+}
+
+.showcase > div > h3 {
+  width: 100%;
+  font-size: var(--fs-sm);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 400;
+  padding-inline: max(1cqmin, 4px);
+  padding-bottom: max(0.5cqmin, 4px);
+}
+
+.showcase > div > h3:last-of-type::after {
+  content: " Ft";
+}
+
+.showcase > div > img {
+  background: var(--light-blue);
+  border-top-left-radius: var(--fs-sm);
+  width: 100%;
+  object-fit: cover;
 }
 
 #showcase_conf{
-    display: flex;
-    padding: 2cqmin;
-    background-color: var(--dark-blue);
-    color: var(--white);
-    justify-content: space-between;
-    align-items: center;
-}
-
-#showcase_conf > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: var(--fs-sm);
-    padding-inline: 3dvw;
+    background: linear-gradient(120deg, var(--black) 40%, var(--light-blue) 50%, var(--dark-blue) 60%);
 }
 
 #showcase_conf > div > img{
-    width: calc(var(--fs-xxxl)*3);
-    background: var(--blue);
+    border: 2px solid var(--dark-blue);
 }
 
 #showcase_parts{
-    display: flex;
-    padding: 2cqmin;
-    background-color: var(--white);
-    color: var(--blue);
-    justify-content: space-between;
-    align-items: center;
+    background: linear-gradient(200deg, var(--white), var(--light-blue));
 }
 
 #showcase_parts > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: var(--fs-sm);
+    padding-top: max(1cqh, 5px);
+    background: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
 }
 
-#showcase_parts> div > img{
-    width: calc(var(--fs-xxxl)*3);
-    aspect-ratio: 1/1;
-    border-radius: 50%;
+#showcase_parts > div > h2{
+    background: var(--light-blue);
+}
+
+#showcase_parts > div > h3{
     background: var(--blue);
+    border-bottom-left-radius: var(--fs-sm);
+    border-bottom-right-radius: var(--fs-sm);
+    padding-block: max(0.5cqmin, 4px);
 }
 
+#showcase_parts > div > img{
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background: var(--blue);
+    width: 90%;
+    margin-bottom: max(0.5cqmin, 4px);
+}
+
+@media screen and (width < 768px) {
+  .showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .showcase > div{
+    max-width: 30dvw;
+  }
+}
+
+@media screen and (width < 500px) {
+  #introduction > div:first-child {
+    align-items: center;
+  }
+  #introduction > div:first-child > h1 {
+    text-align: center;
+  }
+  #introduction > div:first-child > p {
+    text-align: justify;
+  }
+
+  .showcase > div{
+    max-width: 50dvw;
+  }
+}
+
+@media screen and (width < 320px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+}
