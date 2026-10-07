@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-blue);
+    padding: 3dvw;
+}
+
+.rows{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-bottom: 1dvh;
+}
+
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    width: 70%;
+    padding: 2cqmin;
+}
+
+.text > div{
+    width: 40%;
+}
+
+.text > div:last-child{
+    text-align: right;
+}
+
+.row{
+    display: flex;
+}
+
+.row:nth-child(even){
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+.row:nth-child(odd){
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.row > div > img{
+    width: 10dvw;
+}
+
+.details{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3cqmin;
+}
+
+.row > div > h2{
+    font-family: "Quantico", sans-serif;;
+}
