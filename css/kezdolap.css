@@ -143,48 +143,54 @@ main {
   object-fit: cover;
 }
 
-#showcase_conf{
-    background: linear-gradient(120deg, var(--black) 40%, var(--light-blue) 50%, var(--dark-blue) 60%);
+#showcase_conf {
+  background: linear-gradient(
+    120deg,
+    var(--black) 40%,
+    var(--light-blue) 50%,
+    var(--dark-blue) 60%
+  );
+  border-block: 2px solid var(--blue);
 }
 
-#showcase_conf > div > img{
-    border: 2px solid var(--dark-blue);
+#showcase_conf > div > img {
+  border: 2px solid var(--dark-blue);
 }
 
-#showcase_parts{
-    background: linear-gradient(200deg, var(--white), var(--light-blue));
+#showcase_parts {
+  background: linear-gradient(200deg, var(--white), var(--light-blue));
 }
 
-#showcase_parts > div{
-    padding-top: max(1cqh, 5px);
-    background: var(--dark-blue);
-    border: 2px solid var(--dark-blue);
+#showcase_parts > div {
+  padding-top: max(1cqh, 5px);
+  background: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
 }
 
-#showcase_parts > div > h2{
-    background: var(--light-blue);
+#showcase_parts > div > h2 {
+  background: var(--light-blue);
 }
 
-#showcase_parts > div > h3{
-    background: var(--blue);
-    border-bottom-left-radius: var(--fs-sm);
-    border-bottom-right-radius: var(--fs-sm);
-    padding-block: max(0.5cqmin, 4px);
+#showcase_parts > div > h3 {
+  background: var(--blue);
+  border-bottom-left-radius: var(--fs-sm);
+  border-bottom-right-radius: var(--fs-sm);
+  padding-block: max(0.5cqmin, 4px);
 }
 
-#showcase_parts > div > img{
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    background: var(--blue);
-    width: 90%;
-    margin-bottom: max(0.5cqmin, 4px);
+#showcase_parts > div > img {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background: var(--blue);
+  width: 90%;
+  margin-bottom: max(0.5cqmin, 4px);
 }
 
 @media screen and (width < 768px) {
   .showcase {
     grid-template-columns: repeat(2, 1fr);
   }
-  .showcase > div{
+  .showcase > div {
     max-width: 30dvw;
   }
 }
@@ -200,7 +206,7 @@ main {
     text-align: justify;
   }
 
-  .showcase > div{
+  .showcase > div {
     max-width: 50dvw;
   }
 }

@@ -22,7 +22,7 @@ header > section {
   z-index: 10;
 }
 
-section > h2 {
+header > section > h2 {
   color: var(--white);
   font-family: "Inria Sans", sans-serif;
   font-size: var(--fs-md);
@@ -33,7 +33,7 @@ section > h2 {
   text-align: center;
 }
 
-section > h1 {
+header > section > h1 {
   color: var(--white);
   font-family: "Style Script", cursive;
   font-size: var(--fs-xxxl);

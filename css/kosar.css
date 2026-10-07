@@ -1,65 +1,277 @@
-@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-main{
-    display: flex;
-    flex-direction: column;
+main {
+  display: flex;
+  flex-direction: column;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--light-blue);
-    padding: 3dvw;
+.content {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at top, var(--blue), var(--dark-blue));
+  width: 100%;
+  padding: 3dvw;
 }
 
-.rows{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    padding-bottom: 1dvh;
+.content > h1 {
+  font-family: "Quantico", sans-serif;
+  font-size: var(--fs-xxxl);
+  color: var(--white);
+  padding-block: 4dvh;
 }
 
+.rows {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  border: 2px solid var(--blue);
+}
 
-.text{
-    display: flex;
-    justify-content: space-between;
-    color: var(--white);
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row:nth-child(even) {
+  background: var(--white);
+  color: var(--dark-blue);
+}
+
+.row:nth-child(even) > div:last-child > section:first-child > h2 {
+  text-shadow: 0.2cqmin 0.2cqmin var(--light-blue);
+}
+
+.row:nth-child(even) .number-input > input {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.row:nth-child(odd) {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.row:nth-child(odd) > div:last-child > section:first-child > h2 {
+  text-shadow:
+    0.2cqmin 0.2cqmin var(--blue),
+    0.4cqmin 0.4cqmin var(--light-blue);
+}
+
+.row:nth-child(odd) .number-input > input {
+  background: var(--white);
+  color: var(--dark-blue);
+}
+
+.row > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1cqmin;
+}
+
+.row > div:first-child > img {
+  width: clamp(120px, 12dvw, 150px);
+  aspect-ratio: 1/1;
+}
+
+.row > div:last-child {
+  display: flex;
+  gap: 1cqmin;
+  flex-grow: 1;
+}
+
+.row > div:last-child > section:first-child > h2 {
+  font-family: "Quantico", sans-serif;
+  font-size: var(--fs-base);
+  padding: 1cqmin;
+}
+
+.row > div:last-child > section:last-child {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row > div:last-child > section:last-child > h3 {
+  font-size: var(--fs-sm);
+  font-family: "Quantico", sans-serif;
+  align-self: flex-end;
+  padding: 1cqh 2cqw;
+  text-wrap: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 1cqh;
+}
+
+.row > div:last-child > section:last-child > h3::after {
+  content: " Ft";
+}
+
+.row > div:last-child > section:last-child > span {
+  font-size: var(--fs-base);
+  font-variation-settings: "FILL" 0;
+  align-self: flex-end;
+  padding: 1cqmin;
+  margin: 1cqh 2cqw;
+  color: red;
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: var(--fs-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.row > div:last-child > section:last-child > span:is(:hover, :active, :focus) {
+  font-variation-settings: "FILL" 1;
+  color: var(--white);
+  background: red;
+}
+
+.number-input {
+  display: flex;
+  column-gap: 1cqw;
+  width: 100%;
+  padding: 1cqmin;
+}
+
+.number-input > button {
+  font-size: var(--fs-base);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5cqmin;
+  aspect-ratio: 1/1;
+  width: 3ch;
+  appearance: none;
+  border: none;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.number-input > button:is(:hover) {
+  background: var(--light-blue);
+}
+
+.number-input > input {
+  font-size: var(--fs-sm);
+  font-family: "Quantico", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: calc(var(--fs-sm) * 0.7);
+  text-align: center;
+  max-width: 6ch;
+  flex-grow: 1;
+}
+
+.number-input > input::-webkit-inner-spin-button,
+.number-input > input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  font-weight: bold;
+  width: 70%;
+  gap: 3cqmin;
+  padding: 2cqmin;
+  margin-top: 3dvh;
+  font-family: "Noto Sans Indic Siyaq Numbers", sans-serif;
+  background: none;
+}
+
+.text > div {
+  text-align: justify;
+  background: none;
+}
+
+.details {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3cqmin;
+  font-family: "Noto Sans Indic Siyaq Numbers", sans-serif;
+  background: radial-gradient(
+    ellipse at bottom,
+    var(--light-blue),
+    var(--white)
+  );
+  color: var(--blue);
+}
+
+.details > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details > div > section {
+  display: flex;
+  justify-content: space-between;
+  gap: 5dvw;
+}
+
+.details > div > section > h4 {
+  font-size: var(--fs-base);
+  font-family: "Noto Sans Indic Siyaq Numbers", sans-serif;
+}
+
+.details > div > section > span {
+  font-size: var(--fs-base);
+  font-family: "Quantico", sans-serif;
+  text-wrap: nowrap;
+}
+
+.details > div > section > span::after {
+  content: " Ft";
+}
+
+@media screen and (width < 525px) {
+  .content > h1 {
+    text-align: center;
+  }
+  .rows {
+    margin-inline: auto;
     width: 70%;
-    padding: 2cqmin;
-}
+    min-width: 220px;
+  }
 
-.text > div{
-    width: 40%;
-}
+  .row {
+    flex-direction: column;
+    padding: 1cqmin;
+  }
 
-.text > div:last-child{
-    text-align: right;
-}
+  .row > div:last-child {
+    flex-direction: column;
+    width: 100%;
+  }
 
-.row{
-    display: flex;
-}
+  .row > div:last-child > section:first-child {
+    margin-right: auto;
+  }
 
-.row:nth-child(even){
-    background-color: var(--white);
-    color: var(--dark-blue);
-}
-.row:nth-child(odd){
-    background-color: var(--dark-blue);
-    color: var(--white);
-}
+  .row > div:last-child > section:last-child {
+    margin-left: auto;
+  }
 
-.row > div > img{
-    width: 10dvw;
-}
+  .row > div:last-child > section:first-child > h2 {
+    font-size: var(--fs-md);
+  }
 
-.details{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 3cqmin;
-}
+  .row > div:last-child > section:last-child > h3 {
+    padding: 0;
+    padding-right: 2cqw;
+    font-size: var(--fs-base);
+  }
 
-.row > div > h2{
-    font-family: "Quantico", sans-serif;;
+  .text {
+    flex-direction: column;
+    width: 100%;
+  }
 }

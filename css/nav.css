@@ -196,12 +196,12 @@ nav {
     border: 0;
   }
 
-  #nav-responsive.open > #nav-links > section{
+  #nav-responsive.open > #nav-links > section {
     padding: 1.5dvh 1.5dvw;
     border-bottom: 0.5dvh solid transparent;
   }
 
-  #nav-responsive.open > #nav-links > section:is(:hover, :active, :focus){
+  #nav-responsive.open > #nav-links > section:is(:hover, :active, :focus) {
     border-bottom: 0.5dvh solid var(--white);
   }
 
@@ -217,7 +217,7 @@ nav {
     font-size: var(--fs-base);
   }
 
-  #nav-btns{
+  #nav-btns {
     width: 100%;
     padding-top: 1dvh;
     background: linear-gradient(180deg, var(--dark-blue) 70%, var(--blue));
