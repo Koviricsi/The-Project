@@ -1,2 +1,2 @@
 # The-Project
-https://koviricsi.github.io/The-Project/html/kezdolap.html
+https://koviricsi.github.io/The-Project/html/
