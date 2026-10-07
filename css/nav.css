@@ -1,283 +1,248 @@
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-
-/*nav START*/
-
-
-nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    background: var(--dark-blue);
-    color: var(--white);
-    font-family: "Goldman", sans-serif;
-    height: max(10dvh, 75px);
-    overflow: hidden;
-    container-type: size;
-    transition: 0.2s all;
+nav {
+  width: 100%;
+  background: var(--dark-blue);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--white);
 }
 
 #nav-hamburger{
     display: none;
 }
 
-#nav-links,
-#nav-btns{
-    display: flex;
-    justify-content: space-around;
+#nav-responsive {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  font-family: "Ubuntu", sans-serif;
+  border-bottom: 1px solid var(--white);
+  transition: all 0.1s;
 }
 
-#nav-links > section,
-#nav-btns > section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12cqmin;
-    cursor: pointer;
-    user-select: none;
+#nav-links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
 }
 
-#nav-links > section > span,
-#nav-btns > section > span{
-    order: -1;
-}
-
-
-#nav-links > section > span,
-#nav-btns > section > span{
-    font-variation-settings: 'FILL' 0;
-    transition: 0.2s all;
-}
-
-#nav-links > section:is(:hover, :active, :focus) > span,
-#nav-btns > section:is(:hover, :active, :focus) > span{
-    font-variation-settings: 'FILL' 1;
-}
-
-
-/*nav END*/
-
-
-/*nav-links START*/
-
-
-#nav-links{
-    align-items: stretch;
-}
-
-#nav-links > section{
-    flex-direction: column;
-    background-image: linear-gradient(to top, transparent, transparent 20cqh);
-    border-bottom: 5cqh solid transparent;
-    position: relative;
-    gap: 5cqh;
-    transition: 0.2s all;
-}
-
-#nav-links > section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(
-    to top, 
-    hsl(from var(--white) h s l / 0.5), 
-    transparent 20cqh
-  );
-  opacity: 0;
-  transition: 0.2s all;
-  pointer-events: none;
-}
-
-#nav-links > section > h3{
-    text-shadow: 0cqw 0cqw var(--blue), 0cqw 0cqw var(--light-blue);
-    text-wrap: nowrap;
-    transition: 0.2s all;
+#nav-links > section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5dvh 1.5dvw;
+  border-bottom: 0.5dvh solid transparent;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
 #nav-links > section:is(:hover, :active, :focus) {
-  border-bottom: 5cqh solid var(--white);
+  border-bottom: 0.5dvh solid var(--white);
+  backdrop-filter: brightness(2);
 }
 
-#nav-links > section:is(:hover, :active, :focus)::before {
-  opacity: 1;
+#nav-links > section:is(:hover, :active, :focus) > h3 {
+  text-shadow:
+    0.2cqmin 0.2cqmin var(--blue),
+    0.3cqmin 0.3cqmin var(--light-blue);
 }
 
-#nav-links > section:is(:hover, :active, :focus) > h3{
-    text-shadow: .1cqw .1cqw var(--blue), .2cqw .2cqw var(--light-blue);
+#nav-links > section:is(:hover, :active, :focus) > span {
+  font-variation-settings: "FILL" 1;
 }
 
-
-/*nav-links END*/
-
-
-/*nav-btns START*/
-
-
-#nav-btns{
-    align-items: center;
-    padding-inline: 1cqw;
-    gap: 1cqw;
+#nav-links > section > span {
+  order: -1;
+  font-size: var(--fs-base);
+  font-variation-settings: "FILL" 0;
+  user-select: none;
+  transition: all 0.1s;
 }
 
-#nav-btns > section{
-    gap: 0.5cqw;
-    background: var(--blue);
-    border: 3cqmin dashed var(--white);
-    border-radius: 20cqmin;
-    transition: 0.2s all;
+#nav-links > section > h3 {
+  font-size: var(--fs-sm);
+  user-select: none;
+  text-wrap: nowrap;
+  transition: all 0.1s;
 }
 
-#nav-btns > section:is(:hover, :active, :focus){
-    border: 3cqmin solid var(--white);
-    background: var(--light-blue) !important;
+#nav-btns {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
 }
 
-
-/*nav-btns END*/
-
-
-/*other START*/
-
-
-#nav-links > section.nav-active{
-    background: hsl(from var(--accent) h s l / 0.2);
+#nav-btns > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue);
+  cursor: pointer;
+  gap: 0.3dvw;
+  padding: 1cqh 1.5cqw;
+  margin-right: 1dvw;
+  border: 0.4cqmin solid var(--white);
+  border-radius: var(--fs-sm);
 }
 
-#nav-btns > section.nav-active{
-    background: hsl(from var(--light-blue) h s l / 0.5);
-    border-color: var(--accent);
+#nav-btns > section:is(:hover, :active, :focus) {
+  background: var(--light-blue);
 }
 
-
-/*other END*/
-
-
-/*Minimized START*/
-
-
-@media screen and (width < 1075px) {
-    nav{
-        container-type: normal;
-        width: fit-content;
-        height: fit-content;
-        max-height: 12dvh;
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin: 1cqmin;
-        border: 0.5dvw solid var(--white);
-        border-radius: 2dvw;
-        flex-direction: column;
-    }
-
-    #nav-hamburger{
-        position: relative;
-        display: flex;
-        font-size: max(25px, 6dvw);
-        cursor: pointer;
-        user-select: none;
-        font-variation-settings: 'FILL' 0;
-        align-self: flex-end;
-        transition: 0.2s all;
-    }
-
-    #nav-hamburger:is(:hover, :active, :focus){
-        font-variation-settings: 'FILL' 1;
-    }
-
-    #nav-links,
-    #nav-btns{
-        width: 0;
-        height: 0;
-        transition: 0.2s all;
-        transform: scale(0);
-    }
-
-    #nav-links{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #nav-btns{
-        justify-content: center;
-        gap: 4dvw;
-    }
-
-    #nav-links > section,
-    #nav-btns > section{
-        width: 0;
-        height: 0;
-        flex-direction: row;
-        filter: blur(10px);
-        border: none;
-        transition: 0.2s all;
-    }
-
-    nav.open{
-        max-height: fit-content;
-    }
-
-    nav.open > #nav-hamburger{
-        transform: rotateY(180deg);
-    }
-
-    nav.open > #nav-links,
-    nav.open > #nav-btns{
-        width: fit-content;
-        height: fit-content;
-        transform: scale(1);
-        padding: 2cqmin;
-    }
-
-    nav.open > #nav-links{
-        flex-grow: 1;
-    }
-
-    nav.open > #nav-btns{
-        margin-inline: auto;
-    }
-    
-    nav.open > #nav-links > section{
-        padding: 1dvw;
-        gap: 1dvh;
-        width: 100%;
-        height: fit-content;
-        justify-content: flex-start;
-        border: none;
-        filter: blur(0);
-    }
-
-    nav.open > #nav-links > section > span{
-        font-size: max(20px, 2.5dvw);
-    }
-
-    nav.open > #nav-links > section > h3{
-        font-size: max(10px, 2dvw);
-    }
-
-    nav.open > #nav-btns > section{
-        flex-direction: row;
-        padding: 0.5dvw 1.5dvw;
-        gap: 0;
-        width: 100%;
-        height: fit-content;
-        border: .5cqmin dashed var(--white);
-        filter: blur(0);
-    }
-
-    nav.open > #nav-btns > section:is(:hover, :active, :focus){
-        border: .5cqmin solid var(--white);
-    }
-
-    nav.open > #nav-btns > section > span{
-        font-size: max(15px, 2dvw);
-    }
-
-    nav.open > #nav-btns > section > h3{
-        font-size: max(10px, 2dvw);
-    }
+#nav-btns > section:is(:hover, :active, :focus) > span {
+  font-variation-settings: "FILL" 1;
 }
 
+#nav-btns > section > span {
+  font-size: var(--fs-md);
+  font-variation-settings: "FILL" 0;
+  user-select: none;
+  transition: all 0.1s;
+}
 
-/*Minimized END*/
+#nav-btns > section > h3 {
+  font-size: var(--fs-sm);
+  user-select: none;
+  text-wrap: nowrap;
+  transition: all 0.1s;
+}
+
+@media screen and (width < 900px) {
+  #nav-hamburger {
+    display: flex;
+    justify-self: flex-end;
+    color: var(--white);
+    cursor: pointer;
+    font-size: var(--fs-xxxl);
+    user-select: none;
+    position: relative;
+    transition: all 0.1s;
+  }
+
+  #nav-hamburger:is(:hover, :active, :focus) {
+    backdrop-filter: brightness(2);
+    color: transparent;
+  }
+
+  #nav-hamburger::before {
+    content: "menu_open";
+    position: absolute;
+    inset: 0;
+    color: transparent;
+  }
+
+  #nav-hamburger:is(:hover, :active, :focus)::before {
+    color: var(--white);
+  }
+
+  #nav-hamburger.open:is(:hover, :active, :focus)::before {
+    color: transparent;
+  }
+
+  #nav-hamburger::after {
+    content: "close";
+    position: absolute;
+    inset: 0;
+    color: transparent;
+  }
+
+  #nav-hamburger.open {
+    color: transparent;
+  }
+
+  #nav-hamburger.open::after {
+    color: var(--white);
+  }
+
+  #nav-responsive {
+    background: var(--dark-blue);
+    flex-direction: column;
+    position: absolute;
+    height: fit-content;
+    height: 0;
+    border-top: 0cqh solid transparent;
+    overflow: hidden;
+  }
+
+  #nav-responsive.open {
+    height: fit-content;
+    border-top: 0.1cqh solid var(--white);
+    gap: 1cqh;
+  }
+
+  #nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1px;
+    background: var(--white);
+    padding-bottom: 1px;
+  }
+
+  #nav-links > section {
+    flex: 1 1 250px;
+    background: var(--dark-blue);
+    padding: 0;
+    border: 0;
+  }
+
+  #nav-responsive.open > #nav-links > section {
+    padding: 1.5dvh 1.5dvw;
+    border-bottom: 0.5dvh solid transparent;
+  }
+
+  #nav-responsive.open > #nav-links > section:is(:hover, :active, :focus) {
+    border-bottom: 0.5dvh solid var(--white);
+  }
+
+  #nav-links > section > :is(h3, span) {
+    font-size: 0;
+  }
+
+  #nav-responsive.open > #nav-links > section > span {
+    font-size: var(--fs-md);
+  }
+
+  #nav-responsive.open > #nav-links > section > h3 {
+    font-size: var(--fs-base);
+  }
+
+  #nav-btns {
+    width: 100%;
+    padding-top: 1dvh;
+    background: linear-gradient(180deg, var(--dark-blue) 70%, var(--blue));
+    padding-bottom: 1cqh;
+  }
+
+  #nav-btns > section {
+    padding: 0;
+    border: none;
+  }
+
+  #nav-responsive.open > #nav-btns > section {
+    padding: 0.8cqh 1.2cqw;
+    border: max(0.5cqmin, 3px) solid var(--white);
+  }
+
+  #nav-btns > section > :is(h3, span) {
+    font-size: 0;
+  }
+
+  #nav-responsive.open > #nav-btns > section > span {
+    font-size: var(--fs-md);
+  }
+
+  #nav-responsive.open > #nav-btns > section > h3 {
+    font-size: var(--fs-base);
+  }
+}

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Style+Script&display=swap");
+
+header {
+  min-height: 200px;
+  height: 30dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(var(--black) 30%, var(--blue));
+  box-shadow:
+    1cqmin -1cqmin 5cqmin inset var(--black),
+    -1cqmin 1cqmin 5cqmin inset var(--black);
+  row-gap: 1cqh;
+  position: relative;
+}
+
+header > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+header > section > h2 {
+  color: var(--white);
+  font-family: "Inria Sans", sans-serif;
+  font-size: var(--fs-md);
+  display: inline-block;
+  padding: 0 2cqw;
+  margin: 0 -2cqw;
+  border-bottom: 2px solid var(--white);
+  text-align: center;
+}
+
+header > section > h1 {
+  color: var(--white);
+  font-family: "Style Script", cursive;
+  font-size: var(--fs-xxxl);
+  margin-inline: 20px;
+  text-align: center;
+}
+
+#header-decoration {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  user-select: none;
+}
+
+.hdec {
+  position: absolute;
+  width: 8cqmin;
+  user-select: none;
+}

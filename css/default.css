@@ -6,13 +6,21 @@
 
 /*https://colorhunt.co/palette/02152603346e6eacdae2e2b6*/
 
-:root{
-    --white: #fff;
-    --black: #000;
-    --dark-blue: #021526;
-    --blue: #03346E;
-    --light-blue: #6EACDA;
-    --accent: #E2E2B6;
+:root {
+  interpolate-size: allow-keywords;
+  --white: #fff;
+  --black: #000;
+  --dark-blue: #021526;
+  --blue: #03346e;
+  --light-blue: #6eacda;
+  --accent: #e2e2b6;
+  --fs-sm: calc(0.6rem + 0.5vi);
+  --fs-base: calc(0.8rem + 0.6vi);
+  --fs-md: calc(1rem + 0.7vi);
+  --fs-lg: calc(1.2rem + 0.8vi);
+  --fs-xl: calc(1.4rem + 0.9vi);
+  --fs-xxl: calc(1.6rem + 1vi);
+  --fs-xxxl: calc(1.8rem + 1.1vi);
 }
 
 html {
@@ -20,12 +28,11 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    min-height: 100dvh;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    background-color: var(--dark-blue);
-    color: var(--accent);
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img,
@@ -36,4 +43,28 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+  -webkit-user-drag: none;
+}
+
+#main-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--blue);
+  z-index: 1000;
+  animation-name: mainOverlayFade;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+@keyframes mainOverlayFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }

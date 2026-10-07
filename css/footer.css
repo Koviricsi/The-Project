@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+footer {
+  min-height: 20dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(100deg, var(--dark-blue), var(--blue));
+  color: var(--white);
+  row-gap: 5dvh;
+  padding-block: 2dvh;
+  font-family: "Aldrich", sans-serif;
+  box-shadow: 0 -1dvh 3dvh inset black;
+}
+
+footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 4dvw;
+  font-size: var(--fs-sm);
+}
+
+footer > div:first-child {
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1.5dvh;
+  flex: 1 1 250px;
+}
+
+footer > div:first-child > section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1dvw;
+}
+
+footer > div:first-child > section > h4 {
+  text-wrap: nowrap;
+}
+
+footer > div:last-child {
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  row-gap: 1dvh;
+  flex: 1 1 350px;
+  text-align: justify;
+}
+
+footer > div:last-child > section:last-of-type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: max(2cqw, 20px);
+  font-size: var(--fs-md);
+}
+
+footer > div:last-child > section:last-of-type > span {
+  cursor: pointer;
+}
+
+footer > div:last-child > small {
+  color: hsl(from var(--white) h s l / 0.7);
+  font-size: var(--fs-sm);
+}
